@@ -1,0 +1,14 @@
+.idea/
+.vscode/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.DS_Store
+
+.editorconfig
+.prettierignore
+.prettierrc.js
+tsconfig.json
+package-lock.json
+tsup.config.ts

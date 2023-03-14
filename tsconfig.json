@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "esnext",
+    "moduleResolution": "node",
+    "strict": true,
+    "noEmit": false,
+    "allowJs": false,
+    "allowSyntheticDefaultImports": true,
+    "declaration": true,
+    "downlevelIteration": true,
+    "emitDeclarationOnly": false,
+    "esModuleInterop": false,
+    "skipLibCheck": true,
+    "removeComments": false,
+    "isolatedModules": true,
+  },
+  "include": ["src/**/*"]
+}
