@@ -1,6 +1,6 @@
 {
   "name": "typedef-payjp-webhook",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "PAY.JPのWebhookのリクエストボディの型定義を提供する。",
   "license": "MIT",
   "publishConfig": {
@@ -20,7 +20,9 @@
     "payjp"
   ],
   "types": "dist/index.d.ts",
-  "files": ["dist/**"],
+  "files": [
+    "dist/**"
+  ],
   "main": "dist/index.js",
   "module": "dist/index.mjs",
   "peerDependencies": {
