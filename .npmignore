@@ -6,9 +6,9 @@ yarn-debug.log*
 yarn-error.log*
 .DS_Store
 
+.node-version
 .editorconfig
-.prettierignore
-.prettierrc.js
+biome.jsonc
 tsconfig.json
 package-lock.json
 tsup.config.ts
