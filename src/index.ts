@@ -2,8 +2,8 @@ import type { Card, Charge, Customer, Plan, Subscription, Tenant, TenantTransfer
 import { PayjpWebhookEventTypeIdentifier } from './types/event-identifier'
 import type {
   EventIdentifierChargeType,
-  EventIdentifierCustomerType,
   EventIdentifierCustomerCardType,
+  EventIdentifierCustomerType,
   EventIdentifierPlanType,
   EventIdentifierSubscriptionType,
   EventIdentifierTenantTransferType,
