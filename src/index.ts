@@ -1,13 +1,29 @@
-import type { Card, Charge, Customer, Plan, Subscription, Tenant, TenantTransfer, Token, Transfer } from 'payjp'
+import type {
+  Balance,
+  Card,
+  Charge,
+  Customer,
+  Plan,
+  Statement,
+  Subscription,
+  Tenant,
+  TenantTransfer,
+  Term,
+  Token,
+  Transfer,
+} from 'payjp'
 import { PayjpWebhookEventTypeIdentifier } from './types/event-identifier'
 import type {
+  EventIdentifierBalanceType,
   EventIdentifierChargeType,
   EventIdentifierCustomerCardType,
   EventIdentifierCustomerType,
   EventIdentifierPlanType,
+  EventIdentifierStatementType,
   EventIdentifierSubscriptionType,
   EventIdentifierTenantTransferType,
   EventIdentifierTenantType,
+  EventIdentifierTermType,
   EventIdentifierTokenType,
   EventIdentifierTransferType,
 } from './types/event-identifier'
@@ -24,6 +40,9 @@ export namespace PayjpWebhook {
     | EventWebhookRequestBody<EventIdentifierTransferType, Transfer>
     | EventWebhookRequestBody<EventIdentifierTenantType, Tenant>
     | EventWebhookRequestBody<EventIdentifierTenantTransferType, TenantTransfer>
+    | EventWebhookRequestBody<EventIdentifierTermType, Term>
+    | EventWebhookRequestBody<EventIdentifierStatementType, Statement>
+    | EventWebhookRequestBody<EventIdentifierBalanceType, Balance>
 
   export type EventTypeIdentifier = {
     Charge: EventIdentifierChargeType

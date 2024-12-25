@@ -105,6 +105,10 @@ export type EventIdentifierTransferType = (typeof EventIdentifierTransfer)[keyof
  * Group: tenant
  */
 const EventIdentifierTenant = {
+  // テナント作成
+  TenantCreated: 'tenant.created',
+  // テナント削除
+  TenantDeleted: 'tenant.deleted',
   // テナント情報の更新、本番申請(初回・更新含む)、弊社による審査結果反映
   TenantUpdated: 'tenant.updated',
 } as const
@@ -120,6 +124,41 @@ const EventIdentifierTenantTransfer = {
 export type EventIdentifierTenantTransferType =
   (typeof EventIdentifierTenantTransfer)[keyof typeof EventIdentifierTenantTransfer]
 
+/**
+ * Group: term
+ */
+const EventIdentifierTerm = {
+  // 区間の作成
+  TermCreated: 'term.created',
+  // 区間の売上締め処理が終了
+  TermClosed: 'term.closed',
+} as const
+export type EventIdentifierTermType = (typeof EventIdentifierTerm)[keyof typeof EventIdentifierTerm]
+
+/**
+ * Group: statement
+ */
+const EventIdentifierStatement = {
+  // 取引明細の作成
+  StatementCreated: 'statement.created',
+} as const
+export type EventIdentifierStatementType = (typeof EventIdentifierStatement)[keyof typeof EventIdentifierStatement]
+
+/**
+ * Group: balance
+ */
+const EventIdentifierBalance = {
+  // 残高の作成
+  BalanceCreated: 'balance.created',
+  // 残高が振込もしくは請求に確定した
+  BalanceFixed: 'balance.fixed',
+  // 残高の精算が完了
+  BalanceClosed: 'balance.closed',
+  // 残高がマージされた
+  BalanceMerged: 'balance.merged',
+} as const
+export type EventIdentifierBalanceType = (typeof EventIdentifierBalance)[keyof typeof EventIdentifierBalance]
+
 export const PayjpWebhookEventTypeIdentifier = {
   ...EventIdentifierCharge,
   ...EventIdentifierCustomer,
@@ -130,4 +169,7 @@ export const PayjpWebhookEventTypeIdentifier = {
   ...EventIdentifierTransfer,
   ...EventIdentifierTenant,
   ...EventIdentifierTenantTransfer,
+  ...EventIdentifierTerm,
+  ...EventIdentifierStatement,
+  ...EventIdentifierBalance,
 } as const
