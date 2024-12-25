@@ -9,10 +9,10 @@ TypeScriptで開発しているプロジェクトにて、PAY.JPのイベントW
 
 ```bash
 # npm
-npm install --save-dev typedef-payjp-webhook
+npm install typedef-payjp-webhook
 
 # yarn
-yarn add -D typedef-payjp-webhook
+yarn add typedef-payjp-webhook
 ```
 
 ※ [payjp](https://www.npmjs.com/package/payjp) は別途インストールが必要です。
