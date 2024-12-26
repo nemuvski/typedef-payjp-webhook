@@ -1,3 +1,10 @@
+/**
+ * @see {@link https://pay.jp/docs/api/#%E3%82%A4%E3%83%99%E3%83%B3%E3%83%88%E3%81%A8webhook}
+ */
+
+/**
+ * Group: charge/dispute
+ */
 const EventIdentifierCharge = {
   // 支払いの成功
   ChargeSucceeded: 'charge.succeeded',
@@ -14,6 +21,9 @@ const EventIdentifierCharge = {
 } as const
 export type EventIdentifierChargeType = (typeof EventIdentifierCharge)[keyof typeof EventIdentifierCharge]
 
+/**
+ * Group: customer
+ */
 const EventIdentifierCustomer = {
   // 顧客の作成
   CustomerCreated: 'customer.created',
@@ -24,6 +34,9 @@ const EventIdentifierCustomer = {
 } as const
 export type EventIdentifierCustomerType = (typeof EventIdentifierCustomer)[keyof typeof EventIdentifierCustomer]
 
+/**
+ * Group: customer.card
+ */
 const EventIdentifierCustomerCard = {
   // 顧客のカード作成
   CustomerCardCreated: 'customer.card.created',
@@ -35,6 +48,9 @@ const EventIdentifierCustomerCard = {
 export type EventIdentifierCustomerCardType =
   (typeof EventIdentifierCustomerCard)[keyof typeof EventIdentifierCustomerCard]
 
+/**
+ * Group: plan
+ */
 const EventIdentifierPlan = {
   // プランの作成
   PlanCreated: 'plan.created',
@@ -45,6 +61,9 @@ const EventIdentifierPlan = {
 } as const
 export type EventIdentifierPlanType = (typeof EventIdentifierPlan)[keyof typeof EventIdentifierPlan]
 
+/**
+ * Group: subscription
+ */
 const EventIdentifierSubscription = {
   // 定期課金の作成
   SubscriptionCreated: 'subscription.created',
@@ -64,30 +83,81 @@ const EventIdentifierSubscription = {
 export type EventIdentifierSubscriptionType =
   (typeof EventIdentifierSubscription)[keyof typeof EventIdentifierSubscription]
 
+/**
+ * Group: token
+ */
 const EventIdentifierToken = {
   // トークンの作成
   TokenCreated: 'token.created',
 } as const
 export type EventIdentifierTokenType = (typeof EventIdentifierToken)[keyof typeof EventIdentifierToken]
 
+/**
+ * Group: transfer
+ */
 const EventIdentifierTransfer = {
   // 入金内容の確定 (通常加盟店、プラットフォーマー)
   TransferSucceeded: 'transfer.succeeded',
 } as const
 export type EventIdentifierTransferType = (typeof EventIdentifierTransfer)[keyof typeof EventIdentifierTransfer]
 
+/**
+ * Group: tenant
+ */
 const EventIdentifierTenant = {
+  // テナント作成
+  TenantCreated: 'tenant.created',
+  // テナント削除
+  TenantDeleted: 'tenant.deleted',
   // テナント情報の更新、本番申請(初回・更新含む)、弊社による審査結果反映
   TenantUpdated: 'tenant.updated',
 } as const
 export type EventIdentifierTenantType = (typeof EventIdentifierTenant)[keyof typeof EventIdentifierTenant]
 
+/**
+ * Group: tenant_transfer
+ */
 const EventIdentifierTenantTransfer = {
   // テナントの入金内容の確定
   TenantTransferSucceeded: 'tenant_transfer.succeeded',
 } as const
 export type EventIdentifierTenantTransferType =
   (typeof EventIdentifierTenantTransfer)[keyof typeof EventIdentifierTenantTransfer]
+
+/**
+ * Group: term
+ */
+const EventIdentifierTerm = {
+  // 区間の作成
+  TermCreated: 'term.created',
+  // 区間の売上締め処理が終了
+  TermClosed: 'term.closed',
+} as const
+export type EventIdentifierTermType = (typeof EventIdentifierTerm)[keyof typeof EventIdentifierTerm]
+
+/**
+ * Group: statement
+ */
+const EventIdentifierStatement = {
+  // 取引明細の作成
+  StatementCreated: 'statement.created',
+} as const
+export type EventIdentifierStatementType = (typeof EventIdentifierStatement)[keyof typeof EventIdentifierStatement]
+
+/**
+ * Group: balance
+ */
+const EventIdentifierBalance = {
+  // 残高の作成
+  BalanceCreated: 'balance.created',
+  // 残高が振込もしくは請求に確定した
+  BalanceFixed: 'balance.fixed',
+  // 残高の精算が完了
+  BalanceClosed: 'balance.closed',
+  // 残高がマージされた
+  BalanceMerged: 'balance.merged',
+} as const
+export type EventIdentifierBalanceType = (typeof EventIdentifierBalance)[keyof typeof EventIdentifierBalance]
 
 export const PayjpWebhookEventTypeIdentifier = {
   ...EventIdentifierCharge,
@@ -99,4 +169,7 @@ export const PayjpWebhookEventTypeIdentifier = {
   ...EventIdentifierTransfer,
   ...EventIdentifierTenant,
   ...EventIdentifierTenantTransfer,
+  ...EventIdentifierTerm,
+  ...EventIdentifierStatement,
+  ...EventIdentifierBalance,
 } as const
