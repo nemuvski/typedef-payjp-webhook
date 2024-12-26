@@ -36,3 +36,5 @@ jobs:
       - run: npm ci
       - name: type check
         run: npm run typecheck
+      - name: small test
+        run: npm run test

@@ -12,3 +12,4 @@ biome.jsonc
 tsconfig.json
 package-lock.json
 tsup.config.ts
+vitest.config.ts
