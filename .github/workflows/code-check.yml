@@ -24,8 +24,8 @@ jobs:
       - name: lint
         run: biome lint
 
-  typecheck:
-    name: Typecheck
+  testing:
+    name: Testing
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
