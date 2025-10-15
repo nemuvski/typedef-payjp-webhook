@@ -28,7 +28,6 @@ jobs:
       - run: npm ci
       - name: building
         run: npm run build
+      # npm auto-generates provenance when using trusted publishing.
       - name: publish
-        run: npm publish --provenance
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: npm publish
