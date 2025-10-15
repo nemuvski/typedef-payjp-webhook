@@ -1,6 +1,6 @@
 {
   "name": "typedef-payjp-webhook",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "PAY.JPのWebhookのリクエストボディの型定義を提供する。",
   "license": "MIT",
   "publishConfig": {
