@@ -1,7 +1,14 @@
 {
-  "$schema": "https://biomejs.dev/schemas/1.9.4/schema.json",
-  "vcs": { "enabled": false, "clientKind": "git", "useIgnoreFile": false },
-  "files": { "ignoreUnknown": false, "ignore": ["dist/"] },
+  "$schema": "node_modules/@biomejs/biome/configuration_schema.json",
+  "vcs": {
+    "enabled": false,
+    "clientKind": "git",
+    "useIgnoreFile": false
+  },
+  "files": {
+    "ignoreUnknown": false,
+    "includes": ["**"]
+  },
   "formatter": {
     "enabled": true,
     "useEditorconfig": true,
@@ -12,10 +19,20 @@
     "lineWidth": 120,
     "attributePosition": "auto",
     "bracketSpacing": true,
-    "ignore": ["package.json", "package-lock.json", "tsconfig.json", "dist/"]
+    "includes": ["**", "!**/package.json", "!**/package-lock.json", "!**/tsconfig.json", "!dist/**"]
   },
-  "organizeImports": { "enabled": true },
-  "linter": { "enabled": true, "rules": { "recommended": true }, "ignore": ["dist/"] },
+  "assist": {
+    "actions": {
+      "source": {
+        "organizeImports": "on"
+      }
+    }
+  },
+  "linter": {
+    "enabled": true,
+    "rules": { "recommended": true },
+    "includes": ["**", "!dist/**"]
+  },
   "javascript": {
     "formatter": {
       "jsxQuoteStyle": "single",
