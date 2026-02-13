@@ -10,5 +10,5 @@ test('EventWebhookRequestBody', () => {
     object: 'event'
     pending_webhooks: number
     created: number
-  }>().toMatchTypeOf<EventWebhookRequestBody<'test-event', { id: string }>>()
+  }>().toExtend<EventWebhookRequestBody<'test-event', { id: string }>>()
 })

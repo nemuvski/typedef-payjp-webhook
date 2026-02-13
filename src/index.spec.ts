@@ -25,7 +25,7 @@ describe.concurrent('RequestBody', () => {
       object: 'event'
       pending_webhooks: number
       created: number
-    }>().toMatchTypeOf<PayjpWebhook.RequestBody>()
+    }>().toExtend<PayjpWebhook.RequestBody>()
 
     expectTypeOf<{
       id: string
@@ -35,7 +35,7 @@ describe.concurrent('RequestBody', () => {
       object: 'event'
       pending_webhooks: number
       created: number
-    }>().toMatchTypeOf<PayjpWebhook.RequestBody>()
+    }>().toExtend<PayjpWebhook.RequestBody>()
   })
 
   test('Customer', () => {
@@ -47,7 +47,7 @@ describe.concurrent('RequestBody', () => {
       object: 'event'
       pending_webhooks: number
       created: number
-    }>().toMatchTypeOf<PayjpWebhook.RequestBody>()
+    }>().toExtend<PayjpWebhook.RequestBody>()
   })
 
   test('Card', () => {
@@ -59,7 +59,7 @@ describe.concurrent('RequestBody', () => {
       object: 'event'
       pending_webhooks: number
       created: number
-    }>().toMatchTypeOf<PayjpWebhook.RequestBody>()
+    }>().toExtend<PayjpWebhook.RequestBody>()
   })
 
   test('Plan', () => {
@@ -71,7 +71,7 @@ describe.concurrent('RequestBody', () => {
       object: 'event'
       pending_webhooks: number
       created: number
-    }>().toMatchTypeOf<PayjpWebhook.RequestBody>()
+    }>().toExtend<PayjpWebhook.RequestBody>()
   })
 
   test('Subscription', () => {
@@ -83,7 +83,7 @@ describe.concurrent('RequestBody', () => {
       object: 'event'
       pending_webhooks: number
       created: number
-    }>().toMatchTypeOf<PayjpWebhook.RequestBody>()
+    }>().toExtend<PayjpWebhook.RequestBody>()
   })
 
   test('Token', () => {
@@ -95,7 +95,7 @@ describe.concurrent('RequestBody', () => {
       object: 'event'
       pending_webhooks: number
       created: number
-    }>().toMatchTypeOf<PayjpWebhook.RequestBody>()
+    }>().toExtend<PayjpWebhook.RequestBody>()
   })
 
   test('Transfer', () => {
@@ -107,7 +107,7 @@ describe.concurrent('RequestBody', () => {
       object: 'event'
       pending_webhooks: number
       created: number
-    }>().toMatchTypeOf<PayjpWebhook.RequestBody>()
+    }>().toExtend<PayjpWebhook.RequestBody>()
   })
 
   test('Tenant', () => {
@@ -119,7 +119,7 @@ describe.concurrent('RequestBody', () => {
       object: 'event'
       pending_webhooks: number
       created: number
-    }>().toMatchTypeOf<PayjpWebhook.RequestBody>()
+    }>().toExtend<PayjpWebhook.RequestBody>()
   })
 
   test('TenantTransfer', () => {
@@ -131,7 +131,7 @@ describe.concurrent('RequestBody', () => {
       object: 'event'
       pending_webhooks: number
       created: number
-    }>().toMatchTypeOf<PayjpWebhook.RequestBody>()
+    }>().toExtend<PayjpWebhook.RequestBody>()
   })
 
   test('Term', () => {
@@ -143,7 +143,7 @@ describe.concurrent('RequestBody', () => {
       object: 'event'
       pending_webhooks: number
       created: number
-    }>().toMatchTypeOf<PayjpWebhook.RequestBody>()
+    }>().toExtend<PayjpWebhook.RequestBody>()
   })
 
   test('Statement', () => {
@@ -155,7 +155,7 @@ describe.concurrent('RequestBody', () => {
       object: 'event'
       pending_webhooks: number
       created: number
-    }>().toMatchTypeOf<PayjpWebhook.RequestBody>()
+    }>().toExtend<PayjpWebhook.RequestBody>()
   })
 
   test('Balance', () => {
@@ -167,6 +167,6 @@ describe.concurrent('RequestBody', () => {
       object: 'event'
       pending_webhooks: number
       created: number
-    }>().toMatchTypeOf<PayjpWebhook.RequestBody>()
+    }>().toExtend<PayjpWebhook.RequestBody>()
   })
 })
