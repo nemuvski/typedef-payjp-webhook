@@ -26,7 +26,7 @@
   "main": "dist/index.js",
   "module": "dist/index.mjs",
   "peerDependencies": {
-    "payjp": ">=2.2.0 <3.0.0"
+    "payjp": ">=2.2.0 <4.0.0"
   },
   "devDependencies": {
     "@biomejs/biome": "2.2.6",
